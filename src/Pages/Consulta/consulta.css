@@ -1,0 +1,25 @@
+.form-sem-consulta {
+    margin-top: 30px;
+    float: left;
+    width: 52%;
+    height: 100px;
+    text-align: center;
+    background-color: white;
+    margin-left: 420px;
+}
+
+.form-sem-consulta p{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.form-sem-consulta a{
+    background-color: #E53035;
+    padding:10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}

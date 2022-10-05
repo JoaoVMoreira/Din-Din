@@ -1,0 +1,142 @@
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin-top: 40px;
+    width: 100%;
+    font-weight: 900;
+}
+
+.title h1{
+    background-color: white;
+    width: 600px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.form{
+    margin-top: 30px;
+    float: left;
+    width: 52%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-left: 280px;
+}
+
+.titulo {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.titulo input{
+    width: 550px;
+    height: 35px;
+    background-color: #cdcdcd;
+    border: 0;
+    border-radius: 10px;
+}
+
+.titulo input::placeholder{
+    color: black;
+    font-weight: 900;
+    text-align: center;
+    font-size: 18px;
+}
+
+.valor-tipo {
+    margin-bottom: 25px;
+}
+
+.valor-tipo input {
+    width: 260px;
+    height: 40px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: #cdcdcd;
+    border: 0;
+    border-radius: 10px;
+}
+
+.valor-tipo input::placeholder {
+    color: black;
+    font-weight: 900;
+    text-align: center;
+    font-size: 18px;
+}
+
+.valor-tipo select{
+    width: 260px;
+    height: 40px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: #cdcdcd;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.valor-tipo option {
+    color: black;
+    text-align: center;
+}
+
+.categoria{
+    margin-bottom: 25px;
+}
+
+.categoria select{
+    width: 550px;
+    height: 40px;
+    background-color: #cdcdcd;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.categoria option {
+    color: black;
+    text-align: center;
+}
+
+.descricao{
+    margin-bottom: 30px;
+}
+
+.descricao input{
+    width: 550px;
+    height: 150px;
+    background-color: #cdcdcd;
+    border: 0;
+    border-radius: 10px;
+}
+
+.descricao input::placeholder {
+    color: black;
+    font-weight: 900;
+    text-align: center;
+    font-size: 18px;
+}
+
+.enviar button{
+    background-color: #E53035;
+}
+
+.enviar button:hover{
+    background-color: #c12a2d;
+    border: 0;
+    color: white;
+}
+
+@media screen and (max-width: 700px){
+    .form{
+        width: 100%;
+        margin-left: 0;
+    }
+
+}
+
