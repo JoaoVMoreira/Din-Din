@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import { AuthContext } from '../../contexts/auth'
 import './Dashboard.css'
 
-import Header from "../../components/Header"
+import Header from "../../components/Header/Header"
+import HeaderTop from "../../components/HeaderTop/HeaderTop"
 
 function Dashboard() {
 
@@ -23,6 +24,7 @@ function Dashboard() {
         
         <div>
             <div>
+                <HeaderTop/>
                 <Header />
             </div>
             <div className="conteudo">

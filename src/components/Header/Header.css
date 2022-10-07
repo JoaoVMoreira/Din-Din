@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
+.sidebar{
+    margin: 0;
+    padding: 0;
+    background-color: #0F1923;
+    width: 74px;
+    height: 90%;
+    position: fixed;
+    overflow: auto;
+    font-family: 'roboto';
+}
+
+.menu{
+    margin-top: 50px;
+    
+}
+
+
+.sidebar a{
+    font-size: 40px;
+    text-decoration: none;
+    color: #fde500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
+.sidebar p{
+    font-size: 16px;
+}
+.sair{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sair button{
+    margin-top: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+    background-color: #FF1616;
+    border-radius: 5px;
+    display: flex;
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}

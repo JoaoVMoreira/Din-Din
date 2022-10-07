@@ -17,18 +17,13 @@ function Login(){
 
     return(
         <div className='conteiner'>
-            <div className='lateral1'>
-                <img src={require('../../Medias/logo-amarelo.png')}/>
-            </div>
-            <div className='lateral2'>
-                <div className='form'>
-                    <label>Login:</label>
-                    <input type='text' value={email} onChange={(e) => setEmail(e.target.value)} /><br />
-                    <label>Senha:</label>
-                    <input type='password' value={senha} onChange={(e) => setSenha(e.target.value)} /><br/>
+            <div className='box'>
+                    <img src={require('../../Medias/logo-principal.png')}/>
+                    <h1>Faça login em sua conta</h1>
+                    <input placeholder='    E-mail' type='text' value={email} onChange={(e) => setEmail(e.target.value)} /><br />
+                    <input placeholder='    Senha' type='password' value={senha} onChange={(e) => setSenha(e.target.value)} /><br/>
                     <button onClick={Logar}>Entrar</button>
                     <Link to='/cadastro'>Cadastrar-se</Link>
-                </div>
             </div>
         </div>
     )
