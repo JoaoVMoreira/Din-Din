@@ -18,6 +18,11 @@ function Dashboard() {
 
     function Cadastra(){
         CadastraItens(titulo, valor, tipo, categoria, descricao)
+        setTitulo('')
+        setValor('')
+        setTipo('')
+        setCategoria('')
+        setDescricao('')
     }  
 
     return (
@@ -27,38 +32,37 @@ function Dashboard() {
                 <HeaderTop/>
                 <Header />
             </div>
-            <div className="conteudo">
+            <div className="content">
                 <div className="title">
                     <h1>Cadastro</h1>
                 </div>
                 <div className="form">
                     <div className="titulo">
-                        <input placeholder="Titulo" value={titulo} onChange={(e)=>setTitulo(e.target.value)}/>
+                        <input placeholder="     Titulo" value={titulo} onChange={(e)=>setTitulo(e.target.value)}/>
                     </div>
                     <div className="valor-tipo">
-                        <input placeholder="Valor" value={valor} onChange={(e)=>setValor(e.target.value)}/>
+                        <input placeholder="     Valor" value={valor} onChange={(e)=>setValor(e.target.value)}/>
                         <select name="tipo" value={tipo} onChange={(e)=>setTipo(e.target.value)}>
-                            <option value='0'>Selecione</option>
-                            <option value='1'>Ganho</option>
-                            <option value='2'>Gasto</option>
+                            <option>Tipo</option>
+                            <option>Ganho</option>
+                            <option>Gasto</option>
                         </select>
                     </div>
                     <div className="categoria">
                         <select name='categoria' value={categoria} onChange={(e)=>setCategoria(e.target.value)}>
-                            <option>Selecione</option>
+                            <option>Categoria</option>
                             <option>Lazer</option>
                             <option>Lazer</option>
                             <option>Lazer</option>
                         </select>
                     </div>
                     <div className="descricao">
-                        <input placeholder="Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
-                    </div>
-                    <div className="enviar">
-                        <button onClick={Cadastra}>Cadastrar</button>
-                    </div>  
-                    
+                        <input placeholder="     Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
+                    </div> 
                 </div>
+                <div className="enviar">
+                    <button onClick={Cadastra}>Registrar movimentação</button>
+                </div> 
             </div>
         </div>
     )

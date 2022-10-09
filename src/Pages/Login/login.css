@@ -50,6 +50,7 @@ body{
 .box button{
     width: 350px;
     border: 0;
+    height: 40px;
     border-radius: 3px;
     color: #0F1923;
     margin-top: 45px;

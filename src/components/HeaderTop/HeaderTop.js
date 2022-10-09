@@ -4,7 +4,7 @@ export default function HeaderTop(){
     return(
         <div>
             <div className='HeaderTop'>
-                <img src={require('../../Medias/logo-principal.png')} />
+                <img src={require('../../Medias/Logo-header.png')} />
 
                 <div className='indicadores'>
                     <div className='total'>

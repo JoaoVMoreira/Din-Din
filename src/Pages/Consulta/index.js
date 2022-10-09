@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header';
+import HeaderTop from '../../components/HeaderTop/HeaderTop';
 import './consulta.css'
 
 function Consulta (){
@@ -10,9 +11,10 @@ function Consulta (){
     return(
         <div>
             <div>
+                <HeaderTop/>
                 <Header/>
             </div>
-            <div className='conteudo'>
+            <div className='content'>
                 <div className='title'>
                     <h1>Consulta</h1>
                 </div>

@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     background-color: #0F1923;
-    width: 74px;
+    width: 65px;
     height: 90%;
     position: fixed;
     overflow: auto;
@@ -11,24 +11,28 @@
 }
 
 .menu{
-    margin-top: 50px;
+    margin-top: 100px;
     
 }
 
 
 .sidebar a{
-    font-size: 40px;
+    font-size: 38px;
     text-decoration: none;
     color: #fde500;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+}
+
+.content {
+    margin-left: 65px;
 }
 
 .sidebar p{
-    font-size: 16px;
+    font-size: 14px;
 }
 .sair{
     display: flex;
@@ -49,4 +53,13 @@
     align-items: center;
     justify-content: center;
     color: white;
+}
+
+.sair button:hover {
+    background-color: #ff1616d0;
+}
+
+.sidebar a:hover{
+    color: #fde400d8;
+    border-left: 1px #cdcdcd solid;
 }
