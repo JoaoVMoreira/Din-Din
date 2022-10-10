@@ -11,7 +11,7 @@ function Dashboard() {
     const { CadastraItens} = useContext(AuthContext)
 
     const [titulo , setTitulo] = useState('')
-    const [valor, setValor] = useState('')
+    const [valor, setValor] = useState()
     const [tipo, setTipo] = useState(0)
     const [categoria, setCategoria] = useState('')
     const [descricao, setDescricao] = useState('')

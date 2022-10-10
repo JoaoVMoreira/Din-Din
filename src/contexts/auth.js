@@ -6,6 +6,8 @@ export const AuthContext = createContext({})
 
 function AuthProvider({ children }){
     const[auth, setAuth] = useState(null)
+    const[totalGasto, setTotalGasto] = useState(0)
+    const[totalGanho, setTotalGanho] = useState(0)
 
     useEffect(()=>{
         function LocalStorageInteraction() {
@@ -17,6 +19,29 @@ function AuthProvider({ children }){
         }
         LocalStorageInteraction()
     },[])
+
+    useEffect(()=>{
+
+        async function CalculaTot(){
+            await firebase.firestore().collection('dados')
+            .get()
+            .then((snapshot)=>{
+
+                snapshot.forEach((doc)=>{
+                    if (doc.data().tipo === 'Ganho') {
+                        let valorTot =+ doc.data().valor
+                        setTotalGanho(valorTot)
+                    }
+                })
+
+
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+        }
+
+    }, [])
     
     async function CadastraItens(titulo, valor, tipo, categoria, descricao) {
 
@@ -37,7 +62,6 @@ function AuthProvider({ children }){
             })
         }
     }
-
 
     async function cadastraUser(email, senha, nome){
         await firebase.auth().createUserWithEmailAndPassword(email, senha)
@@ -98,10 +122,8 @@ function AuthProvider({ children }){
         storageUser(null)
     }
 
-    
-
     return(
-        <AuthContext.Provider value={{ signed: !!auth, auth, cadastraUser, Deslogar, LogarUser, CadastraItens }}>
+        <AuthContext.Provider value={{ signed: !!auth, auth, cadastraUser, Deslogar, LogarUser, CadastraItens, totalGanho  }}>
             {children}
         </AuthContext.Provider>
     )

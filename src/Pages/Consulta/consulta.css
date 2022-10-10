@@ -1,11 +1,16 @@
+.conteiner-consulta{
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 80%;
+    height: 100%;
+    display: flex;  
+    justify-content: center;
+}
+
 .form-sem-consulta {
-    margin-top: 30px;
     float: left;
-    width: 52%;
-    height: 100px;
-    text-align: center;
-    background-color: white;
-    margin-left: 420px;
+    width: 90%;
+    height: 85%;
 }
 
 .form-sem-consulta p{
@@ -22,4 +27,57 @@
     text-decoration: none;
     color: white;
     font-weight: 900;
+}
+
+.form-sem-consulta span{
+    color: red;
+    font-weight: 700;
+}
+
+table{
+    border: 1px solid #cdcdcd;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table tr{
+    background-color: #1A242D;
+    border: 1px solid #cdcdcd;
+}
+
+table th, table td{
+    padding: 12px;
+    text-align: left;
+    color: white;
+}
+
+table td{
+    font-size: 14px;
+}
+
+table tr:hover{
+    background-color: #23313d;
+}
+
+.btn a{
+    float: right;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #FDE500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0F1923;
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: 20px;
+    margin-top: -35px;
+}
+
+.btn a:hover{
+    background-color: #fde400be;
 }
