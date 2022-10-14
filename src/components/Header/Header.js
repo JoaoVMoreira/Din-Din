@@ -21,7 +21,7 @@ function Header(){
                 <Link><AiFillHome /><p>Home</p></Link>
                 <Link to='/dashboard'><AiFillPlusSquare /><p>Cadastro</p></Link>
                 <Link to='/consulta'><FaSearchDollar /><p>Consulta</p></Link>
-                <Link><FaRegChartBar /><p>Investir</p></Link>
+                <Link to='/investimento'><FaRegChartBar /><p>Investir</p></Link>
                 <div className='sair'>
                     <button onClick={DeslogarUser}><FaSignOutAlt /></button> 
                 </div> 

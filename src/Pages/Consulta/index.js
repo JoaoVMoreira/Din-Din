@@ -52,7 +52,7 @@ function Consulta (){
                 
             })
 
-            setCadastros(cadastros => [...cadastros, ...lista])
+            setCadastros(cadastros => [...lista])
         }else{
             setEmpty(true)
         }
