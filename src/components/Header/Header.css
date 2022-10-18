@@ -12,7 +12,6 @@
 
 .menu{
     margin-top: 100px;
-    
 }
 
 
@@ -33,29 +32,9 @@
 
 .sidebar p{
     font-size: 14px;
-}
-.sair{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+} 
 
-.sair button{
-    margin-top: 20px;
-    width: 45px;
-    height: 45px;
-    font-size: 25px;
-    background-color: #FF1616;
-    border-radius: 5px;
-    display: flex;
-    border: 0;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-.sair button:hover {
+.sidebar button:hover {
     background-color: #ff1616d0;
 }
 
@@ -63,3 +42,55 @@
     color: #fde400d8;
     border-left: 1px #cdcdcd solid;
 }
+
+.sidebar button {
+    background-color: #FF1616;
+    border: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    color: #0F1923;
+    border-radius: 5px; 
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 900px){
+    .sidebar{
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .sidebar a{
+        margin-bottom: 10px;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        margin-left: 30px;
+        margin-bottom: 0;
+
+    }
+
+    .menu a{
+        margin-left: 20px;
+        float: left;
+    }
+
+    .sidebar a:hover {
+        border-left: none;
+    }
+
+    .sidebar button{
+        float: right;
+        margin-right: 10px;
+        margin-top: -60px;
+    }
+    .content{
+        margin-left: 0;
+    }
+
+}
+

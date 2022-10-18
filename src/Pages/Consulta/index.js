@@ -52,7 +52,7 @@ function Consulta (){
                 
             })
 
-            setCadastros(cadastros => [...lista])
+            setCadastros(cadastros => [...cadastros, ...lista])
         }else{
             setEmpty(true)
         }
@@ -122,7 +122,7 @@ function Consulta (){
                             <Link to='/dashboard'>Cadastro</Link>
                         </div>
                     </div>
-                )}
+                )} 
             </div>
 
             

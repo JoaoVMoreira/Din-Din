@@ -80,3 +80,26 @@
 .box-cadastro a:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 900px) {
+    .form{
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .valor-tipo input{
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .box-lateral {
+        display: none;
+    }
+
+    .box-cadastro{
+        width: 80%;
+        border-radius: 5px;
+    }
+}

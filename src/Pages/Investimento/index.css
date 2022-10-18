@@ -13,7 +13,7 @@
 
 .infos span{
     border: 1px solid #fde500;
-    width: 200px;
+    width: 20%;
     height: 45px;
     display: flex;
     flex-direction: column;
@@ -66,8 +66,13 @@
     margin-right: 35px;
 }
 
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .button button{
-    width: 1000px;
+    width: 90%;
     height: 45px;
     background-color: #fde500;
     border: 0;

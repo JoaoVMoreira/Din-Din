@@ -1,13 +1,16 @@
-import {useContext, useEffect, useState } from 'react'
+import {useEffect, useState } from 'react'
 import firebase from 'firebase'
 import './HeaderTop.css'
-import { AuthContext } from '../../contexts/auth'
 
 export default function HeaderTop(){
 
     const [totalGasto, setTotalGasto] = useState([])
-    const [gasto, setGasto] = useState([])
+    const [totalGanho, setTotalGanho] = useState([])
+    const [totalInv, setTotalInv] = useState([])
     let valorSomado = 0
+    let valorSomadoGanho = 0
+    let valorSomadoInv = 0
+    
 
     useEffect(() => {
 
@@ -28,36 +31,77 @@ export default function HeaderTop(){
     async function Soma(snapshot) {
         let ganho = []
         let gasto = []
+        let inv = []
+        
         snapshot.forEach((doc) => {
-            if (doc.data().tipo === 'Gasto') {
-                gasto.push({
-                    valor: doc.data().valor
-                })
-            } else if (doc.data().valor === 'Ganho') {
+            if (doc.data().tipo === 'Ganho') {
                 ganho.push({
                     valor: doc.data().valor
                 })
             }
         })
-        setTotalGasto(...gasto)
+        snapshot.forEach((doc) => {
+            if (doc.data().tipo === 'Gasto') {
+                gasto.push({
+                    valor: doc.data().valor
+                })
+            }
+        })
+        snapshot.forEach((doc) => {
+            if (doc.data().tipo === 'Investimento') {
+                inv.push({
+                    valor: doc.data().valor
+                })
+            }
+        })
+
+        setTotalGasto(totalGasto => [...gasto])
         MostraGasto()
+
+        setTotalGanho(totalGanho => [...ganho])
+        MostraGanho()
+
+        setTotalInv(totalInv => [...totalInv, ...inv])
+        MostraInv()
+
 
     }
 
     function MostraGasto() {
         let tot = totalGasto.length
-        let cont = 0
-        console.log('ta aqui')
+        let contador = 0
 
-        while (cont < tot) {
-            let totalGastoFloat = parseFloat(totalGasto[cont].valor)
+        while (contador < tot) {
+            let totalGastoFloat = parseFloat(totalGasto[contador].valor)
             valorSomado = valorSomado + totalGastoFloat
-            console.log(valorSomado)
-            localStorage.setItem('gastoTot', valorSomado)
-            cont = cont + 1
+            contador = contador + 1
         }
+        localStorage.setItem('gastoTot', valorSomado)
+    }
 
+    function MostraGanho() {
+        let totGanho = totalGanho.length
+        let contador = 0
 
+        while (contador < totGanho) {
+            let totalGanhoFloat = parseFloat(totalGanho[contador].valor)
+            valorSomadoGanho = valorSomadoGanho + totalGanhoFloat
+            contador = contador + 1
+            
+        }
+        localStorage.setItem('ganhoTot', valorSomadoGanho)
+    }
+
+    function MostraInv() {
+        let tot = totalInv.length
+        let contador = 0
+
+        while (contador < tot) {
+            let totalInvFloat = parseFloat(totalInv[contador].valor)
+            valorSomadoInv = valorSomadoGanho + totalInvFloat
+            contador = contador + 1
+        }
+        localStorage.setItem('InvTot', valorSomadoInv)
     }
 
     return(
@@ -67,13 +111,13 @@ export default function HeaderTop(){
 
                 <div className='indicadores'>
                     <div className='total'>
-                        <span>R${gasto}</span>
+                        <span>R${localStorage.getItem('gastoTot')}</span>
                     </div>
                     <div className='total'>
-                        <span>Total ganho</span>
+                        <span>R${localStorage.getItem('ganhoTot')}</span>
                     </div>
                     <div className='total'>
-                        <span>Total Investido</span>
+                        <span>R${localStorage.getItem('InvTot')}</span>
                     </div>
                 </div>
 

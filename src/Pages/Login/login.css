@@ -80,3 +80,9 @@ body{
     text-decoration: underline;
 }
 
+
+@media screen and (max-width: 900px) {
+    .box{
+        width: 80%;
+    }
+}

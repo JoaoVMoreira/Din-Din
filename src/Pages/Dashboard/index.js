@@ -46,6 +46,7 @@ function Dashboard() {
                             <option>Tipo</option>
                             <option>Ganho</option>
                             <option>Gasto</option>
+                            <option>Investimento</option>
                         </select>
                     </div>
                     <div className="categoria">
